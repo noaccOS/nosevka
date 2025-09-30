@@ -6,7 +6,7 @@ let
     ligations.inherits = "dlig";
     noCvSs = false;
     serifs = "sans";
-    spacing = "normal";
+    spacing = "term";
     variants = {
       # JetBrains Mono
       inherits = "ss14";
