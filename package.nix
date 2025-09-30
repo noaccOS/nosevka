@@ -14,7 +14,7 @@ let
         a = "double-storey-serifed";
         at = "threefold";
         b = "toothless-rounded-serifless";
-        capital-x = "straight-bilateral-motion-serifed";
+        capital-x = "curly-serifless";
         dollar = "slanted-interrupted";
         f = "tailed";
         g = "double-storey-open";
