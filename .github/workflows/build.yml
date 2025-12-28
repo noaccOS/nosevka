@@ -1,0 +1,69 @@
+on: push
+
+jobs:
+  nosevka:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: DeterminateSystems/nix-installer-action@main
+        with:
+          diagnostic-endpoint: ""
+      - uses: DeterminateSystems/magic-nix-cache-action@main
+        with:
+          diagnostic-endpoint: ""
+      - uses: cachix/cachix-action@v16
+        with:
+          name: nosevka
+          authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
+      - run: nix build .#default
+
+  nosevka-nerd-fonts:
+    needs: nosevka
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: DeterminateSystems/nix-installer-action@main
+        with:
+          diagnostic-endpoint: ""
+      - uses: DeterminateSystems/magic-nix-cache-action@main
+        with:
+          diagnostic-endpoint: ""
+      - uses: cachix/cachix-action@v16
+        with:
+          name: nosevka
+          authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
+      - run: nix build .#nerd-fonts
+
+  nosevka-nerd-fonts-mono:
+    needs: nosevka
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: DeterminateSystems/nix-installer-action@main
+        with:
+          diagnostic-endpoint: ""
+      - uses: DeterminateSystems/magic-nix-cache-action@main
+        with:
+          diagnostic-endpoint: ""
+      - uses: cachix/cachix-action@v16
+        with:
+          name: nosevka
+          authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
+      - run: nix build .#nerd-fonts-mono
+
+  nosevka-complete:
+    needs: [nosevka, nosevka-nerd-fonts, nosevka-nerd-fonts-mono]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: DeterminateSystems/nix-installer-action@main
+        with:
+          diagnostic-endpoint: ""
+      - uses: DeterminateSystems/magic-nix-cache-action@main
+        with:
+          diagnostic-endpoint: ""
+      - uses: cachix/cachix-action@v16
+        with:
+          name: nosevka
+          authToken: "${{ secrets.CACHIX_AUTH_TOKEN }}"
+      - run: nix build .#complete
