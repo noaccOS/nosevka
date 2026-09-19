@@ -25,20 +25,20 @@
       "locked": {
         "narHash": "sha256-iGM4eqXnDgI04ihtys0zOGd7i+OxfN1YASyg4yVnKAo=",
         "type": "file",
-        "url": "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FontPatcher.zip"
+        "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/FontPatcher.zip"
       },
       "original": {
         "type": "file",
-        "url": "https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FontPatcher.zip"
+        "url": "https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/FontPatcher.zip"
       }
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1789632929,
-        "narHash": "sha256-RjR8AyvGlWuw16XRj7C1YDEw4E27ciuyPeB2nDMzgTU=",
+        "lastModified": 1753844155,
+        "narHash": "sha256-w81jpZeM3AtYlTKIhT05p3IqvJRIHZPyp0Acgb6hXWc=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "a32edd7654519351e48e80372a928df336394670",
+        "rev": "e44b8dc0882d66e2627a8ff252b04a22f4a629fd",
         "type": "github"
       },
       "original": {

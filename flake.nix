@@ -8,7 +8,7 @@
     flake-parts.inputs.nixpkgs-lib.follows = "nixpkgs";
 
     nerd-fonts-font-patcher = {
-      url = "file+https://github.com/ryanoasis/nerd-fonts/releases/latest/download/FontPatcher.zip";
+      url = "file+https://github.com/ryanoasis/nerd-fonts/releases/download/v3.5.1/FontPatcher.zip";
       flake = false;
     };
   };
